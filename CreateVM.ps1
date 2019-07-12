@@ -113,7 +113,6 @@ do{
 }while($state -ne "Running")
 
 # Break to get OS Version to ensure that Windows is up
-# Maybe have to use the old computer name and not the newly created $VMName
 do{
     try{
         Get-WMIObject -Class Win32_OperatingSystem -ComputerName $VMName -Credential $VMCredentials | Select-Object *Version -ExpandProperty Version*
